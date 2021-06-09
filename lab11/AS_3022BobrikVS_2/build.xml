@@ -1,0 +1,26 @@
+<project name="AS_3022BobrikVS_2" default = "copy" >
+
+    <target name="init">
+        <echo message="Building AS_3022BVS_2 Project" />
+    </target>
+
+    <target name="create" depends ="init">
+        <delete  dir= "\\172.16.193.69\webapps\AS_3022BVS\" />
+        <mkdir   dir= "\\172.16.193.69\webapps\AS_3022BVS\" />
+        <mkdir   dir= "\\172.16.193.69\webapps\AS_3022BVS\WEB-INF" />
+        <mkdir   dir= "\\172.16.193.69\webapps\AS_3022BVS\images" />
+    </target>
+
+    <target name="copy" depends ="create">
+        <copy file= "A:\3k2s\PI\AS_3022BobrikVS_2\WEB-INF\web.xml"
+              todir="\\172.16.193.69\webapps\AS_3022BVS\WEB-INF\" />
+        <copy file= "A:\3k2s\PI\AS_3022BobrikVS_2\index.html"
+              todir="\\172.16.193.69\webapps\AS_3022BVS\"  />
+        <copy file= "A:\3k2s\PI\AS_3022BobrikVS_2\education.html"
+              todir="\\172.16.193.69\webapps\AS_3022BVS\"  />
+        <copy file= "A:\3k2s\PI\AS_3022BobrikVS_2\address.html"
+              todir="\\172.16.193.69\webapps\AS_3022BVS\"  />
+        <copy file= "A:\3k2s\PI\AS_3022BobrikVS_2\images\cat.jpg"
+              todir="\\172.16.193.69\webapps\AS_3022BVS\images"  />
+    </target>
+</project>

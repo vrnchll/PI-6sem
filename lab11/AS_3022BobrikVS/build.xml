@@ -1,0 +1,29 @@
+<project name="AS_3022BobrikVS" default = "copy" >
+
+    <target name="init">
+        <echo message="Building AS_3022BobrikVS Project" />
+    </target>
+
+    <target name="create" depends ="init">
+        <delete  dir= "C:\Program Files\Apache Software Foundation\Tomcat 7.0_Tomcat7.0\webapps\AS_3022BobrikVS\" />
+        <mkdir   dir= "C:\Program Files\Apache Software Foundation\Tomcat 7.0_Tomcat7.0\webapps\AS_3022BobrikVS\" />
+        <mkdir   dir= "C:\Program Files\Apache Software Foundation\Tomcat 7.0_Tomcat7.0\webapps\AS_3022BobrikVS\WEB-INF" />
+        <mkdir   dir= "C:\Program Files\Apache Software Foundation\Tomcat 7.0_Tomcat7.0\webapps\AS_3022BobrikVS\images" />
+    </target>
+
+    <target name="copy" depends ="create">
+        <copy file= "A:\3k2s\PI\lab11\AS_3022BobrikVS\WEB-INF\web.xml"
+              todir="C:\Program Files\Apache Software Foundation\Tomcat 7.0_Tomcat7.0\webapps\AS_3022BobrikVS\WEB-INF\" />
+        <copy file= "A:\3k2s\PI\lab11\AS_3022BobrikVS\index.html"
+              todir="C:\Program Files\Apache Software Foundation\Tomcat 7.0_Tomcat7.0\webapps\AS_3022BobrikVS\"  />
+        <!--   <copy file= "\\172.16.193.69\webapps\AS_3022BVS\education.html"
+                 todir="C:\Program Files\Apache Software Foundation\Tomcat 7.0\webapps\AS_3022BobrikVS\"  />
+         -->
+        <copy file= "A:\3k2s\PI\lab11\AS_3022BobrikVS\education.html"
+              todir="C:\Program Files\Apache Software Foundation\Tomcat 7.0_Tomcat7.0\webapps\AS_3022BobrikVS\"  />
+           <copy file= "A:\3k2s\PI\lab11\AS_3022BobrikVS\address.html"
+                 todir="C:\Program Files\Apache Software Foundation\Tomcat 7.0_Tomcat7.0\webapps\AS_3022BobrikVS\"  />
+        <copy file= "A:\3k2s\PI\lab11\AS_3022BobrikVS\images\cat.jpg"
+              todir="C:\Program Files\Apache Software Foundation\Tomcat 7.0_Tomcat7.0\webapps\AS_3022BobrikVS\images\"  />
+    </target>
+   </project>
